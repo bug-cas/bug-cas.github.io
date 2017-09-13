@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Getting Started with deck.js</title>
+
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" media="screen" href="../core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+
+  <script src="../modernizr.custom.js"></script>
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides -->
+    <section class="slide" id="title-slide">
+      <div class="vcenter">
+        <h1>BSD First Steps</h1>
+        <h3>Sistemas Operacionais, lincenças de Software Livre e Cases de Sucesso
+            de Escala Mundial</h3>
+      </div>
+    </section>
+
+    <section class="slide" id="overview">
+      <h2>Visão Geral</h2>
+      <ul>
+        <li>
+          <h4>História do Unix / BSD</h4>
+        </li>
+        <li>
+          <h4>Principais Sistemas BSD</h4>
+        </li>
+        <li>
+          <h4>Licenças de Software Livre</h4>
+        </li>
+        <li>
+          <h4>Aplicações Comerciais e Embarcados</h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-why">
+      <h2>Hisória do UNIX</h2>
+      <ul>
+        <li>
+          <h4>Por quê?</h4>
+
+          <ul>
+            <li class="slide deck-child-current">
+              <p>Mesmo após mais de 4 décadas os sistemas operacionais UN*X
+              ainda são considerados os mais poderosos, versáteis e flexíveis.</p>
+            </li>
+            <li class="slide deck-child-current">
+              <p>Introduziu o método de desenvolvimento de software por camadas.</p>
+            </li>
+            <li class="slide deck-child-current">
+              <p>Aproxima, traz desafios e diversão para os programadores ao
+              redor do globo \o/</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-1965-1969">
+      <h2>Hisória do UNIX</h2>
+      <ul>
+        <li>
+          <h4>1965</h4>
+          <p class="slide deck-child-current">Grupo de cientistas da AT&amp;T e GE juntam forças no MIT com o
+          projeto MultICS (Multiplexed Information and Computer Service)
+          mainframe timesharing system.</p>
+        </li>
+        <li>
+          <h4>1969</h4>
+          <p class="slide deck-child-current">Frustração, economicamente
+          inviável, Bell Labs se retira do esforço, mas em Murray Hill, <u>Ken
+            Thompson, Dennis Ritchie, Doug McIlroy e J. F. Ossanna</u>
+          continuaram a procura pelo Santo Graal...</p>
+        </li>
+        <li>
+          <h4>1969 (primavera)</h4>
+          <p class="slide deck-child-current">Thompson, Dennis e Cnaday discutem
+          o que os usuários esperam de um SO (Sistema Operacional).</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-1969-1969summer">
+      <h2>História do UNIX / BSD</h2>
+      <ul>
+        <li>
+          <h4>1969 (ainda)</h4>
+          <p class="slide deck-child-current">Thompson desenvolveu no seu tempo
+          livre o "space travel".</p>
+        </li>
+        <li>
+          <h4>1969 (verão)</h4>
+          <p class="slide deck-child-current">Thompson começa a implementar o
+          <u>paper file system</u> no PDP-7 e o UNIX começa a tomar forma.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-1970">
+      <h2>História do UNIX / BSD</h2>
+      <ul>
+        <li>
+          <h4>1970 (por aí)</h4>
+          <p class="slide deck-child-current">Brian Kernighan sugere o nome
+          UNIX, satirizando o MultICS.</p>
+        </li>
+        <li>
+          <h4>1970</h4>
+          <p class="slide deck-child-current">Requisitaram a compra de um PDP-11
+          pela bagatela de US$ 65.000,00 para uma aplicação comercial pro
+          Departamento de Patentes do Bell Labs.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-imgPDP11">
+      <h2>História do UNIX / BSD</h2>
+      <img src="res/bsd-first-steps/pdp11.jpg">
+      <div style="text-align: center;">
+        <h4>Dennis Ritchie e Ken Thompson migrando o UNIX pro PDP-11</h4>
+      </div>
+    </section>
+
+    <section class="slide" id="unix-history-1971-1973">
+      <h2>História do UNIX / BSD</h2>
+      <ul>
+        <li>
+          <h4>1971</h4>
+          <p class="slide deck-child-current">Thompson tenta usar o Fortran no
+          PDP-7 (O Unix ainda era escrito em uma linguagem assembly), o que não
+          funcionou muito bem, então ele cria a linguagem B.</p>
+        </li>
+        <li>
+          <h4>1971 (ainda)</h4>
+          <p class="slide deck-child-current">Ritchie usou o PDP-11 pra
+          adicionar tipos diferentes ao "B", que começou a ser chamado de NB,
+          "New B", e também um compilador para a linguagem que com outros
+          ajustes se transformaria no que conhecemos como <u>linguagem C</u>.</p>
+        </li>
+        <li>
+          <h4>1972-1973</h4>
+          <p class="slide deck-child-current">Durante esse longo período,
+          Thompson e Ritchie fizeram o árduo trabalho de reescrever todo o UNIX
+          em linguagem C. Uma das evoluções mais importantes para os sistemas
+          operacionais modernos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-1975-1986">
+      <h2>História do UNIX / BSD</h2>
+      <ul>
+        <li>
+          <h4>1975</h4>
+          <p class="slide deck-child-current">Ken Thompson tira um ano sabático
+          no Bell Labs e vai para Universidade da Califórnia em Berkeley como
+          professor visitante.<br>Ele ajuda os alunos a instalarem a versão 6 do
+          UNIX e estudantes como Chuck Haley e Bill Joy começaram a ajudar a
+          melhorar o sistema.</p>
+        </li>
+        <li>
+          <h4>1977</h4>
+          <p class="slide deck-child-current">Bill Joy começou a compilar a
+          primeira versão do BSD (Berkeley Software Distribution).</p>
+        </li>
+        <li>
+          <h4>1978-1986</h4>
+          <p class="slide deck-child-current"><u>1BSD Released</u> - Era de fato apenas
+          algumas modificações no UNIX 6, mas venderam algumas cópias.<br>
+          <u>2BSD</u> - vi e ex.<br>
+          <u>3BSD (VAX/UNIX or VMUNIX) - 4.3BSD</u> - Várias versões (muitas
+          melhorias e até implementação do modelo OSI) até decidirem ir pra
+          outra arquitetura.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="unix-history-1988-1989">
+      <h2>História do UNIX / BSD</h2>
+      <ul>
+        <li>
+          <h4>1988</h4>
+          <p class="slide deck-child-current"><u>4.3BSD-Tahoe</u> - Primeira
+          versão do BSD que separava código dependente de não dependente da
+          arquitetura.</p>
+        </li>
+        <li>
+          <h4>1989</h4>
+          <p class="slide deck-child-current"><u>Net/1</u> - Primeira
+          versão do BSD com o intuito de ter um software com distribuição livre
+          com todas as melhorias feitas pelo "Networking" (rede) de alunos /
+          voluntários.<br>
+          <u>Net/2</u> - Sistema quase todo livre da licença AT&amp;T.<br>
+          <u>386BSD</u> - Primeiro port para a arquitetura <u>Intel 90386</u>, e
+          pai dos BSDs mais populares hoje, <u>NetBSD, FreeBSD e OpenBSD</u>.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="main-bsd-systems">
+      <h2>Principais Sistemas BSD</h2>
+      <br><br>
+      <div style="display:flex; flex-direction:row; margin: 50px;">
+        <img src="res/bsd-first-steps/nbsd.png">
+        <img src="res/bsd-first-steps/fbsd.jpg">
+        <img src="res/bsd-first-steps/obsd.png">
+      </div>
+    </section>
+
+    <section class="slide" id="netbsd">
+      <h2>NetBSD</h2>
+      <img src="res/bsd-first-steps/nbsd-daemon.jpg">
+      <ul>
+        <li>
+          <h4>Foco em código limpo, correto e portável.</h4>
+        </li>
+        <li>
+          <h4>É o que tem mais suporte a arquiteturas, até o Atari está nesta
+            lista \o/</h4>
+        </li>
+        <li>
+          <h4><a href="http://www.netbsd.org">http://www.netbsd.org</a></h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="freebsd">
+      <h2>FreeBSD</h2>
+      <img src="res/bsd-first-steps/fbsd-daemon.jpg">
+      <ul>
+        <li>
+          <h4>Foco em arquiteturas modernas como Intel-based, ARM e PowerPC.</h4>
+        </li>
+        <li>
+          <h4>É o que tem mais portes e pacotes, hoje (14 jul 2017) 27201 \o/</h4>
+        </li>
+        <li>
+          <h4>O mais indicado para desktops, inclusive tem um fork dele chamado
+            TrueOS (antigo PC-BSD) voltado totalmente para desktops.</h4>
+        </li>
+        <li>
+          <h4><a href="http://www.freebsd.org">http://www.freebsd.org</a></h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="openbsd">
+      <h2>OpenBSD</h2>
+      <img src="res/bsd-first-steps/obsd-puffy.jpg">
+      <ul>
+        <li>
+          <h4>Foco em código limpo, correto, portável e por último e mais
+            importante SEGURO.</h4>
+        </li>
+        <li>
+          <h4>Criador e mantenedor do projeto OpenSSH.</h4>
+        </li>
+        <li>
+          <h4>Criador e mantenedor do projeto LibreSSL (que é o fork do OpenSSL
+          desde o problema conhecido como HeartBleed).</h4>
+        </li>
+        <li>
+          <h4><a href="http://www.openbsd.org">http://www.openbsd.org</a></h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="licenses">
+      <h2>Licenças de Software Livre</h2>
+      <h1>BSD vs (L)GPL</h1>
+    </section>
+
+    <section class="slide" id="apps">
+      <h1>Aplicações Comerciais e Embarcados</h1>
+    </section>
+
+    <section class="slide" id="whatsapp">
+      <h2>WhatsApp</h2>
+      <ul>
+        <li>
+          <h4>Utiliza FreeBSD como webserver.</h4>
+        </li>
+        <li>
+          <h4>Em 2012 divulgaram um sucesso de suporte à carga, com mais de 2
+            milhões de conexões em uma só instância.</h4>
+        </li>
+      </ul>
+      <code>
+        jkb@c123$ sysctl kern.ipc.numopensockets kern.ipc.numopensockets: 2277845
+      </code>
+      <br><br>
+      <code>
+        CPU: 37.9% user,  0.0% nice, 13.6% system,  6.6% interrupt, 41.9% idle Mem: 35G Active, 14G Inact, 18G Wired, 4K Cache, 9838M Buf, 27G Free
+      </code>
+      <br><br>
+      <p><a href="http://blog.whatsapp.com">http://blog.whatsapp.com</a></p>
+    </section>
+
+    <section class="slide" id="netflix">
+      <h2>NETFLIX OpenConnect</h2>
+      <ul>
+        <li>
+          <h4>Também utiliza FreeBSD, são maquinas vendidas para provedores de
+            link de internet</h4>
+        </li>
+        <li>
+          <h4>Nesta máquina tbm. roda NGINX (substituto do httpd apache com
+            licença BSD)</h4>
+        </li>
+      </ul>
+      <p><a href="https://openconnect.netflix.com">
+        https://openconnect.netflix.com</a></p>
+    </section>
+
+    <section class="slide" id="apple-darwin">
+      <h2>Apple Darwin</h2>
+      <ul>
+        <li>
+          <h4>É o sitema operacional de código fonte aberto que serve de base
+            para o OS X e iOS, ou seja, dentro de um dispositivo apple está
+            rodando um sistema Darwin.</h4>
+        </li>
+        <li>
+          <h4>O TimeCapsule, que é uma espécie de roteador wi-fi da Apple,
+            utiliza/utilizou o sistema NetBSD por causa da arquitetura, mas com
+          muita coisa do Darwin incorporada.</h4>
+        </li>
+      </ul>
+      <p><a href="https://opensource.apple.com">
+        https://opensource.apple.com</a></p>
+    </section>
+
+    <section class="slide" id="sony-ps4">
+      <h2>Sony PS4</h2>
+      <ul>
+        <li>
+          <h4>Orbis OS - É o nome dado ao fork do FreeBSD feito pela Sony, que é
+          o sistema operacional do PS4.</h4>
+        </li>
+        <li>
+          <h4>Este porém tem o código 100% fechado.</h4>
+        </li>
+      </ul>
+      <p>Lista com todos os softwares Open Source que são distribuídos junto ao
+      PS4 <a href="http://doc.dl.playstation.net/doc/ps4-oss/">
+        http://doc.dl.playstation.net/doc/ps4-oss/</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>Perguntas ???</h2>
+        <blockquote>
+            <p>Não existe pergunta boba, existe bobo que não pergunta e volta
+            sem nenhuma resposta pra casa<p>
+            <p><cite>Um amigo de um amigo meu</cite></p>
+        </blockquote>
+        <p>
+        Grupo: <a
+             href="https://groups.io/g/bug-cas">https://groups.io/g/bug-cas</a>
+        Lista de discussão: <a
+             href="mailto:bug-cas@groups.io">bug-cas@groups.io</a><br>
+        Inscrição por Email: <a
+             href="mailto:bug-cas+subscribe@groups.io">bug-cas+subscribe@groups.io</a><br>
+        <a href="http://www.alephbit.com.br">www.alephbit.com.br</a><br>
+        <a href="mailto:wneto@alephbit.com.br">wneto@alephbit.com.br</a><br>
+        Twitter: @__wneto
+        </p>
+    </section>
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+<script src="../jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+  $.deck('.slide');
+});
+</script>
+
+</body>
+</html>
