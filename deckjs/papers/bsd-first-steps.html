@@ -45,6 +45,31 @@
       </div>
     </section>
 
+    <section class="slide" id="mini-cv">
+      <h2>Mini Currículo</h2>
+      <h4>Walter Neto</h4>
+      <p>Cresceu na cidade de Bebedouro, interior de São Paulo;</p>
+      <p>Engenheiro de Computação pela Estácio - UniSEB (Faculdades COC) -
+      Ribeirão Preto;</p>
+      <p>Começou a programar computadores com 12 anos de idade (fiquei louco
+      cedo);</p>
+      <p>Ja foi usuário do Linux Conectiva 4.6, Debian (woody), Slackware e
+      Gentoo;</p>
+      <p>Usuário e hacker de kernel do OpenBSD (quando consegue um tempo);</p>
+      <p>Implementou um sistema de journaling para o file system do OpenBSD (não
+      oficial);</p>
+      <p>Fundou o BUG (BSD Users Group) Campinas, pra ter uma comunidade na
+      região onde mora em que possa compartilhar e aprender sobre o uso e
+      desenvolvimento destes poderosos SOs.</p>
+    </section>
+
+    <section class="slide" id="partner-groups">
+      <h2>Grupos / Comunidades Parceiros(as)</h2>
+      <img src="res/bsd-first-steps/lhc.jpg">
+      <img src="res/bsd-first-steps/gdg-cas.png">
+      <img src="res/bsd-first-steps/superlogicalabs.png">
+    </section>
+
     <section class="slide" id="overview">
       <h2>Visão Geral</h2>
       <ul>
@@ -185,8 +210,8 @@
           <p class="slide deck-child-current">Ken Thompson tira um ano sabático
           no Bell Labs e vai para Universidade da Califórnia em Berkeley como
           professor visitante.<br>Ele ajuda os alunos a instalarem a versão 6 do
-          UNIX e estudantes como Chuck Haley e Bill Joy começaram a ajudar a
-          melhorar o sistema.</p>
+          UNIX e estudantes como <u>Chuck Haley</u> e <u>Bill Joy</u> começaram
+          ajudar a melhorar o sistema.</p>
         </li>
         <li>
           <h4>1977</h4>
@@ -229,11 +254,12 @@
 
     <section class="slide" id="main-bsd-systems">
       <h2>Principais Sistemas BSD</h2>
-      <br><br>
-      <div style="display:flex; flex-direction:row; margin: 50px;">
-        <img src="res/bsd-first-steps/nbsd.png">
-        <img src="res/bsd-first-steps/fbsd.jpg">
-        <img src="res/bsd-first-steps/obsd.png">
+      <div style="display:flex; flex-direction:row; flex-wrap: wrap;
+          justify-content: space-around;">
+        <img src="res/bsd-first-steps/nbsd.png" style="margin: 7px;">
+        <img src="res/bsd-first-steps/fbsd.jpg" style="margin: 7px;">
+        <img src="res/bsd-first-steps/obsd.png" style="margin: 7px;">
+        <img src="res/bsd-first-steps/dbsd.png" style="margin: 7px;">
       </div>
     </section>
 
@@ -249,10 +275,9 @@
             itanium e muitos outros, até o Atari (m68k) e Dreamcast (sh3)
             estão nesta lista \o/</h4>
         </li>
-        <li>
-          <h4><a href="http://www.netbsd.org">http://www.netbsd.org</a></h4>
-        </li>
       </ul>
+      <h4><a href="https://www.netbsd.org">https://www.netbsd.org</a></h4>
+      <h4><a href="https://netbsd.org/ports/">https://netbsd.org/ports/</a></h4>
     </section>
 
     <section class="slide" id="freebsd">
@@ -269,10 +294,9 @@
           <h4>O mais indicado para desktops, inclusive tem um fork dele chamado
             TrueOS (antigo PC-BSD) voltado totalmente para desktops.</h4>
         </li>
-        <li>
-          <h4><a href="http://www.freebsd.org">http://www.freebsd.org</a></h4>
-        </li>
       </ul>
+      <h4><a href="https://www.freebsd.org">https://www.freebsd.org</a></h4>
+      <h4><a href="https://www.freebsd.org/ports/">https://www.freebsd.org/ports/</a></h4>
     </section>
 
     <section class="slide" id="openbsd">
@@ -284,21 +308,89 @@
             importante SEGURO.</h4>
         </li>
         <li>
-          <h4>Criador e mantenedor do projeto OpenSSH.</h4>
+          <h4>Criador e mantenedor do subprojeto OpenSSH.</h4>
         </li>
         <li>
-          <h4>Criador e mantenedor do projeto LibreSSL (que é o fork do OpenSSL
+          <h4>Criador e mantenedor do subprojeto LibreSSL (que é o fork do OpenSSL
           desde o problema conhecido como HeartBleed).</h4>
         </li>
         <li>
-          <h4><a href="http://www.openbsd.org">http://www.openbsd.org</a></h4>
+          <h4>Criador e mantenedor também de outros subprojetos como: OpenBGPD,
+            OpenNTPD, OpenSMTPD, OpenIKED e mandoc.</h4>
         </li>
       </ul>
+      <h4><a href="https://www.openbsd.org">https://www.openbsd.org</a></h4>
+      <h4><a href="https://www.openssh.com">https://www.openssh.com</a></h4>
+      <h4><a href="https://www.libressl.org">https://www.libressl.org</a></h4>
     </section>
 
-    <section class="slide" id="licenses">
+    <section class="slide" id="dragonfly">
+      <h2>DraogonFly BSD</h2>
+      <img src="res/bsd-first-steps/dbsd-dragonfly.png">
+      <ul>
+        <li>
+          <h4>É um fork do FreeBSD 4.8 em Junho de 2003, com o objetivo de
+            evoluir em uma linha diferente dos outros três mais famosos.</h4>
+        </li>
+        <li>
+          <h4>Extreme Scaling - SMP muito forte aplicado em quase todos os
+            componentes do kernel.</h4>
+        </li>
+        <li>
+          <h4>HAMMER File System - Sistema de Arquivos próprio com features
+            avançadas como espelhamento e snapshots.</h4>
+        </li>
+        <li>
+          <h4>VKERNEL - Uma feature que permite rodar kernels virtuais em
+            userland, facilitando o debug e desenvolvimento do kernel.</h4>
+        </li>
+      </ul>
+      <h4><a href="https://www.dragonflybsd.org">
+          https://www.dragonflybsd.org</a></h4>
+    </section>
+
+    <section class="slide" id="licenses-title">
       <h2>Licenças de Software Livre</h2>
       <h1>BSD vs (L)GPL</h1>
+    </section>
+
+    <section class="slide" id="licenses-comparison">
+      <h2>Licenças - BSD vs (L)GPL</h2>
+      <div style="display: flex; flex-direction: row; justify-content:
+      space-around;">
+        <div style="width: 50%; padding: 0 14px;">
+          <div style="text-align: center;">
+            <h4>BSD</h4>
+            <p>4/3/2-clause BSD / ISC / MIT / Apache</p>
+          </div>
+          <h4>Basicamente:</h4>
+          <ul>
+            <li>
+              <p>Você é livre pra fazer o que você quiser com o software.</p>
+            </li>
+            <li>
+              <p>Se você tiver algum problem, não queira responsabilizar o autor
+              original.</p>
+            </li>
+          </ul>
+        </div>
+        <div style="width: 50%; padding: 0 14px; border-left: 1px solid;">
+          <div style="text-align: center;">
+            <h4>(L)GPL</h4>
+            <p>(L)GPLv2 / GPLv3 / AGPL</p>
+          </div>
+          <h4>Basicamente:</h4>
+          <ul>
+            <li>
+              <p>Você é liver pra usar, redistribuir e modificar o software.</p>
+            </li>
+            <li>
+              <p>Qualquer alteração feita no software deve ser disponibilizada
+              na mesma licença.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section class="slide" id="apps">
@@ -307,6 +399,7 @@
 
     <section class="slide" id="whatsapp">
       <h2>WhatsApp</h2>
+      <img src="res/bsd-first-steps/whatsapp.png" style="float:right;">
       <ul>
         <li>
           <h4>Utiliza FreeBSD como webserver.</h4>
@@ -329,6 +422,7 @@
 
     <section class="slide" id="netflix">
       <h2>NETFLIX OpenConnect</h2>
+      <img src="res/bsd-first-steps/netflix-oc.png" style="float:right;">
       <ul>
         <li>
           <h4>Também utiliza FreeBSD, são maquinas vendidas para provedores de
@@ -345,6 +439,7 @@
 
     <section class="slide" id="apple-darwin">
       <h2>Apple Darwin</h2>
+      <img src="res/bsd-first-steps/darwin-os.jpg" style="float:right;">
       <ul>
         <li>
           <h4>É o sitema operacional de código fonte aberto que serve de base
@@ -363,6 +458,7 @@
 
     <section class="slide" id="sony-ps4">
       <h2>Sony PS4</h2>
+      <img src="res/bsd-first-steps/ps4.png" style="float:right;">
       <ul>
         <li>
           <h4>Orbis OS - É o nome dado ao fork do FreeBSD feito pela Sony, que é
