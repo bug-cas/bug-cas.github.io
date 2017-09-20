@@ -65,9 +65,18 @@
 
     <section class="slide" id="partner-groups">
       <h2>Grupos / Comunidades Parceiros(as)</h2>
-      <img src="res/bsd-first-steps/lhc.jpg">
-      <img src="res/bsd-first-steps/gdg-cas.png">
-      <img src="res/bsd-first-steps/superlogicalabs.png">
+      <div style="display:flex; flex-direction:row; flex-wrap: wrap;
+      justify-content: space-around;">
+          <img src="res/bsd-first-steps/lhc.jpg">
+          <img src="res/bsd-first-steps/gdg-cas.png">
+          <img src="res/bsd-first-steps/superlogicalabs.png">
+      </div>
+      <p>
+        <a href="https://lhc.net.br">https://lhc.net.br</a><br>
+        <a href="https://www.meetup.com/gdgcampinas/">
+            https://www.meetup.com/gdgcampinas/</a><br>
+        <a href="http://labs.superlogica.com">http://labs.superlogica.com/</a>
+      </p>
     </section>
 
     <section class="slide" id="overview">
@@ -95,7 +104,7 @@
           <h4>Por quê?</h4>
 
           <ul>
-            <li class="slide deck-child-current">
+            <li>
               <p>Mesmo após mais de 4 décadas os sistemas operacionais UN*X
               ainda são considerados os mais poderosos, versáteis e flexíveis.</p>
             </li>
@@ -116,20 +125,20 @@
       <ul>
         <li>
           <h4>1965</h4>
-          <p class="slide deck-child-current">Grupo de cientistas da AT&amp;T e GE juntam forças no MIT com o
+          <p>Grupo de cientistas da AT&amp;T e GE juntam forças no MIT com o
           projeto MultICS (Multiplexed Information and Computer Service)
           mainframe timesharing system.</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1969</h4>
-          <p class="slide deck-child-current">Frustração, economicamente
+          <p>Frustração, economicamente
           inviável, Bell Labs se retira do esforço, mas em Murray Hill, <u>Ken
             Thompson, Dennis Ritchie, Doug McIlroy e J. F. Ossanna</u>
           continuaram a procura pelo Santo Graal...</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1969 (primavera)</h4>
-          <p class="slide deck-child-current">Thompson, Dennis e Cnaday discutem
+          <p>Thompson, Dennis e Cnaday discutem
           o que os usuários esperam de um SO (Sistema Operacional).</p>
         </li>
       </ul>
@@ -140,12 +149,11 @@
       <ul>
         <li>
           <h4>1969 (ainda)</h4>
-          <p class="slide deck-child-current">Thompson desenvolveu no seu tempo
-          livre o "space travel".</p>
+          <p>Thompson desenvolveu no seu tempo livre o "space travel".</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1969 (verão)</h4>
-          <p class="slide deck-child-current">Thompson começa a implementar o
+          <p>Thompson começa a implementar o
           <u>paper file system</u> no PDP-7 e o UNIX começa a tomar forma.</p>
         </li>
       </ul>
@@ -156,12 +164,11 @@
       <ul>
         <li>
           <h4>1970 (por aí)</h4>
-          <p class="slide deck-child-current">Brian Kernighan sugere o nome
-          UNIX, satirizando o MultICS.</p>
+          <p>Brian Kernighan sugere o nome UNIX, satirizando o MultICS.</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1970</h4>
-          <p class="slide deck-child-current">Requisitaram a compra de um PDP-11
+          <p>Requisitaram a compra de um PDP-11
           pela bagatela de US$ 65.000,00 para uma aplicação comercial pro
           Departamento de Patentes do Bell Labs.</p>
         </li>
@@ -181,20 +188,20 @@
       <ul>
         <li>
           <h4>1971</h4>
-          <p class="slide deck-child-current">Thompson tenta usar o Fortran no
+          <p>Thompson tenta usar o Fortran no
           PDP-7 (O Unix ainda era escrito em uma linguagem assembly), o que não
           funcionou muito bem, então ele cria a linguagem B.</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1971 (ainda)</h4>
-          <p class="slide deck-child-current">Ritchie usou o PDP-11 pra
+          <p>Ritchie usou o PDP-11 pra
           adicionar tipos diferentes ao "B", que começou a ser chamado de NB,
           "New B", e também um compilador para a linguagem que com outros
           ajustes se transformaria no que conhecemos como <u>linguagem C</u>.</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1972-1973</h4>
-          <p class="slide deck-child-current">Durante esse longo período,
+          <p>Durante esse longo período,
           Thompson e Ritchie fizeram o árduo trabalho de reescrever todo o UNIX
           em linguagem C. Uma das evoluções mais importantes para os sistemas
           operacionais modernos.</p>
@@ -202,46 +209,54 @@
       </ul>
     </section>
 
-    <section class="slide" id="unix-history-1975-1986">
+    <section class="slide" id="unix-history-1974-1977">
       <h2>História do UNIX / BSD</h2>
       <ul>
         <li>
+          <h4>1974</h4>
+          <p><u>Bob Fabry</u> que esteve no <i>Symposium on Operating System
+          Principles</i>, onde o UNIX foi apresentado pela primeira vez,
+          requisitou a aquisição do código fonte e um PDP-11/45 foi também
+          adquirido para ser usado em tempo compartilhado entre a Ciência da
+          Computação, Matemática e Estatística.</p>
+        </li>
+        <li class="slide deck-child-current">
           <h4>1975</h4>
-          <p class="slide deck-child-current">Ken Thompson tira um ano sabático
+          <p>Ken Thompson tira um ano sabático
           no Bell Labs e vai para Universidade da Califórnia em Berkeley como
           professor visitante.<br>Ele ajuda os alunos a instalarem a versão 6 do
           UNIX e estudantes como <u>Chuck Haley</u> e <u>Bill Joy</u> começaram
           ajudar a melhorar o sistema.</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1977</h4>
-          <p class="slide deck-child-current">Bill Joy começou a compilar a
+          <p>Bill Joy começou a compilar a
           primeira versão do BSD (Berkeley Software Distribution).</p>
-        </li>
-        <li>
-          <h4>1978-1986</h4>
-          <p class="slide deck-child-current"><u>1BSD Released</u> - Era de fato apenas
-          algumas modificações no UNIX 6, mas venderam algumas cópias.<br>
-          <u>2BSD</u> - vi e ex.<br>
-          <u>3BSD (VAX/UNIX or VMUNIX) - 4.3BSD</u> - Várias versões (muitas
-          melhorias e até implementação do modelo OSI) até decidirem ir pra
-          outra arquitetura.</p>
         </li>
       </ul>
     </section>
 
-    <section class="slide" id="unix-history-1988-1989">
+    <section class="slide" id="unix-history-1978-1989">
       <h2>História do UNIX / BSD</h2>
       <ul>
         <li>
+          <h4>1978-1986</h4>
+          <p><u>1BSD Released</u> - Era de fato apenas
+          algumas modificações no UNIX 6, mas venderam algumas cópias.<br>
+          <u>2BSD</u> - vi (versão visual do ex)<br>
+          <u>3BSD (VAX/UNIX or VMUNIX) - 4.3BSD</u> - Várias versões (muitas
+          melhorias e até implementação do modelo OSI) até decidirem ir pra
+          outra arquitetura.</p>
+        </li>
+        <li class="slide deck-child-current">
           <h4>1988</h4>
-          <p class="slide deck-child-current"><u>4.3BSD-Tahoe</u> - Primeira
+          <p><u>4.3BSD-Tahoe</u> - Primeira
           versão do BSD que separava código dependente de não dependente da
           arquitetura.</p>
         </li>
-        <li>
+        <li class="slide deck-child-current">
           <h4>1989</h4>
-          <p class="slide deck-child-current"><u>Net/1</u> - Primeira
+          <p><u>Net/1</u> - Primeira
           versão do BSD com o intuito de ter um software com distribuição livre
           com todas as melhorias feitas pelo "Networking" (rede) de alunos /
           voluntários.<br>
@@ -369,7 +384,7 @@
               <p>Você é livre pra fazer o que você quiser com o software.</p>
             </li>
             <li>
-              <p>Se você tiver algum problem, não queira responsabilizar o autor
+              <p>Se você tiver algum problema, não queira responsabilizar o autor
               original.</p>
             </li>
           </ul>
