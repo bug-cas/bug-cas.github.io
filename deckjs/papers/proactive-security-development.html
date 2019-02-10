@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Desenvolvimento com Segurança Proativa</title>
+  <title>Desenvolvimento de Código Seguro e Antifrágil</title>
 
   <meta name="description" content="A jQuery library for modern HTML presentations">
   <meta name="author" content="Caleb Troughton">
@@ -39,8 +39,10 @@
     <!-- Begin slides -->
     <section class="slide" id="title-slide">
       <div class="vcenter">
-        <h1>Desenvolvimento com Segurança Proativa</h1>
-        <h3>Como antecipar futuros problemas relacionados com Segurança da Informação / Computação</h3>
+        <h1>Desenvolvimento Seguro e Antifrágil</h1>
+        <h3>
+          Como se posicionar perante a complexidade dos problemas de segurança
+        </h3>
       </div>
     </section>
 
@@ -52,14 +54,18 @@
       Ribeirão Preto;</p>
       <p>Começou a programar computadores com 12 anos de idade (fiquei louco
       cedo);</p>
-      <p>Ja foi usuário do Linux Conectiva 4.6, Debian (woody), Slackware e
+      <p>Foi usuário do Linux Conectiva 4.6, Debian (woody), Slackware e
       Gentoo;</p>
       <p>Usuário e hacker de kernel do OpenBSD (quando consegue um tempo);</p>
       <p>Implementou um sistema de journaling para o file system do OpenBSD (não
       oficial);</p>
       <p>Fundou o BUG (BSD Users Group) Campinas, pra ter uma comunidade na
       região onde mora em que possa compartilhar e aprender sobre o uso e
-      desenvolvimento destes poderosos SOs.</p>
+      desenvolvimento destes poderosos SOs;</p>
+      <p>Trabalha como Arquiteto de Software e Instrutor de Desenvolvimento de 
+       Código Seguro para a Superlogica Tecnologias / PJBank, empresas do ramo
+       de ERP recorrente / Conta digital, respectivamente, com mais de 80k
+       clientes em todo o território nacional.</p>
     </section>
 
     <section class="slide" id="partner-groups">
@@ -68,30 +74,34 @@
       justify-content: space-around;">
           <img src="res/bsd-first-steps/lhc.jpg">
           <img src="res/bsd-first-steps/gdg-cas.png">
-          <img src="res/bsd-first-steps/superlogicalabs.png">
       </div>
       <p>
         <a href="https://lhc.net.br">https://lhc.net.br</a><br>
         <a href="https://www.meetup.com/gdgcampinas/">
-            https://www.meetup.com/gdgcampinas/</a><br>
-        <a href="http://labs.superlogica.com">http://labs.superlogica.com/</a>
+         https://www.meetup.com/gdgcampinas/</a><br>
       </p>
     </section>
 
     <section class="slide" id="overview">
-      <h2>Visão Geral</h2>
+      <h2>Visão Geral da Talk</h2>
       <ul>
         <li class="slide deck-child-current">
-          <h4>Introjetando (gastei) conceitos básicos sobre Segurança</h4>
+          <h4>Internalizando conceitos básicos sobre Segurança</h4>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Definindo o oposto de Frágil</h4>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Marcus Ranum e suas idéias Antifrágeis</h4>
         </li>
         <li class="slide deck-child-current">
           <h4>O OpenBSD e seu Design de Sucesso</h4>
         </li>
         <li class="slide deck-child-current">
-          <h4>Aplicando os Conceitos no seu software</h4>
+          <h4>Aplicando os Conceitos</h4>
         </li>
         <li class="slide deck-child-current">
-          <h4>Exemplos, Perguntas e Respostas</h4>
+          <h4>Perguntas e Respostas</h4>
         </li>
       </ul>
     </section>
@@ -114,11 +124,6 @@
           </p>
         </li>
         </div>
-        <li class="slide deck-child-current">
-          <p>Definição do Marcos Ranum<br>
-          <strong>You don't have to do it? Then don't!</strong>
-          </p>
-        </li>
       </ul>
     </section>
 
@@ -200,24 +205,100 @@
       </ul>
     </section>
 
-    <section class="slide" id="basic-concepts-marcus-ranum">
-      <h2>Conceitos Básicos</h2>
+    <section class="slide" id="antifragile-taleb">
+      <h2>Antifrágil</h2>
+      <img src="res/proactive-security-development/nntaleb.jpg"
+       style="float:left; margin-right:35px;">
+      <h4>Nassim Nicholas Taleb</h4>
+      <ul>
+        <li>
+          <p>É autor, ensaísta, estatístico, e analista de riscos líbano-americano, matemático de formação;</p>
+        </li>
+        <li>
+          <p>Conhecido por ser um megainvestidor do mercado financeiro;</p>
+        </li>
+        <li>
+          <p>Professor do Instituto Politécnico da Universidade de Nova Iorque;
+           </p>
+        </li>
+        <li>
+          <p>Presidente da empresa de investimentos Empirica;</p>
+        </li>
+        <li>
+          <p>Principais obras:</p>
+          <ul>
+            <li>A lógica do Cisne Negro (2007)</li>
+            <li>Antifrágil: Coisas que se Beneficiam com o Caos (2012)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="antifragile-concepts">
+      <h2>Antifrágil</h2>
+      <ul>
+        <li>
+          <h4>Qual o oposto de frágil?</h4>
+          <p class="slide deck-child-current">
+            Coisas que se beneficiam com o caos.
+          </p>
+          <blockquote class="slide deck-child-current" style="font-size:1.1em;">
+           Algumas coisas se beneficiam dos impactos; elas prosperam e crescem quando são expostas
+           à volatilidade, ao acaso, à desordem e aos agentes estressores, e
+           apreciam a aventura, o risco e a incerteza.</blockquote>
+        </li>
+        <li>
+          <h4 class="slide deck-child-current">Como se tornar antifrágil?</h4>
+          <p class="slide deck-child-current"><em>Via Negativa</em>, <em>Agentes
+           estressores</em> e <em>Estratégia Barbell</em></p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="marcus-ranum-bio">
+      <h2>Marcus Ranum</h2>
+      <img src="res/proactive-security-development/mranum.jpeg"
+       style="float:left; margin-right: 35px;">
+      <ul>
+        <li>
+          <p>Renomado expert de segurança;</p>
+        </li>
+        <li>
+          <p>É reconhecido por inovação nas tecnologias de firewalls e por ter
+           implementado o primeiro firewall comercial;</p>
+        </li>
+        <li>
+          <p>Prestou serviços de consultoria pra grandes empresas bilionárias e
+           governos nacionais;</p>
+        </li>
+        <li>
+          <p>Chefe de segurança da Tenable Security Inc. (Criadora do Nessus)
+           </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="marcus-ranum-basic">
+      <h2>Marcus Ranum</h2>
       <h4>You don't have to do it? Then don't!</h4>
-      <p class="slide deck-child-current">É retirada de um artigo introdutório do blog de Marcus Ranum, e é a que particularmente mais me identifico.</p>
-      <p class="slide deck-child-current">Marcus Ranum escreveu que as pessoas tentam tratar de Segurança de Computadores como um "foguete da feira de ciências" ou "caixa preta", mas de fato, a Segurança de Computadores não é nada além de ATENÇÃO AOS DETALHES e BOM DESIGN.</p>
-      <p class="slide deck-child-current">Assim a regra mais simples e efetiva quando falamos de Segurança de Computadores é:</p>
+      <p class="slide deck-child-current">É retirada de um artigo introdutório
+       do blog de Marcus Ranum, e é a que particularmente mais me identifico.
+       </p>
+      <p class="slide deck-child-current">Marcus Ranum escreveu que as pessoas
+       tentam tratar de Segurança de Computadores como um "foguete da feira de
+       ciências" ou "caixa preta", mas de fato, a Segurança de Computadores não
+       é nada além de ATENÇÃO AOS DETALHES e BOM DESIGN.</p>
+      <p class="slide deck-child-current">Assim a regra mais simples e efetiva
+       quando falamos de Segurança de Computadores é:</p>
       <blockquote class="slide deck-child-current">
         <p>"Você não precisa fazer isto? Não faça!"<p>
         <p><cite>Marcus Ranum</cite></p>
       </blockquote>
     </section>
 
-    <section class="slide" id="five-dumbest-ideas-title">
-      <h1>As Cinco Idéias mais "Patetas" em Segurança</h1>
-    </section>
-
-    <section class="slide" id="five-dumbest-ideas-1/2">
-      <h2>Idéias mais "Patetas"</h2>
+    <section class="slide" id="marcus-ranumfive-dumbest-ideas-1/2">
+      <h2>Marcus Ranum</h2>
+      <h4>6 Idéias mais frágeis em segurança</h4>
       <ol>
         <li class="slide deck-child-current">
           <h4>Por Padrão, Passa (Default Permit)</h4>
@@ -228,32 +309,47 @@
           <p>Encontrado em Antivirus, Antispams, Antispywares, IPSs e etc.</p>
         </li>
         <li class="slide deck-child-current">
-          <h4>Por Padrão Aceite (Penetrate and Patch)</h4>
-          <p>O grande problema aqui é que ele não melhora o seu código / sistema com relação ao design, se isso fosse bom o "Internet Explorer" não teria tantas falhas.</p>
+          <h4>Penetrate and Patch</h4>
+          <p>O grande problema aqui é que ele não melhora o seu código / sistema
+           com relação ao design, se isso fosse bom o "Internet Explorer" não
+           teria tantas falhas.</p>
         </li>
       </ol>
     </section>
 
-    <section class="slide" id="five-dumbest-ideas-2/2">
-      <h2>Idéias mais "Patetas"</h2>
+    <section class="slide" id="marcus-ranum-five-dumbest-ideas-2/2">
+      <h2>Marcus Ranum</h2>
+      <h4>6 Idéias mais frágeis em segurança</h4>
       <ol start="4">
         <li>
           <h4>Crackear é Legal</h4>
-          <p>A melhor maneira de desencorajar Cracker na internet é dar a eles ações na bolsa, comprar seus livros sobre seus <i>exploits</i>, fazer aulas de "extreme hacking kung fu" e pagar a eles milhares de dolares pra fazerem "<i>penetration tests</i>" contra seu sistema, certo? ERRADO!</p>
+          <p>A melhor maneira de desencorajar Cracker na internet é dar a eles
+           ações na bolsa, comprar seus livros sobre seus <em>exploits</em>, fazer
+           aulas de "extreme hacking kung fu" e pagar a eles milhares de dolares
+           pra fazerem "<em>penetration tests</em>" contra seu sistema, certo?
+           ERRADO!</p>
         </li>
         <li class="slide deck-child-current">
           <h4>Agir é Melhor que Ficar Parado</h4>
-          <p>É mais fácil fazer alguma coisa "pateta" do que fazer alguma coisa "esperta".</p>
+          <p>É mais fácil fazer alguma coisa "idicta" do que fazer alguma coisa
+           "esperta".</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Tentar treinar as pessoas</h4>
+          <p>As teorias que você ensina hoje deverão ser re-ensinadas na semana
+           que vem.</p>
         </li>
       </ol>
     </section>
 
     <section class="slide" id="openbsd-success-case-title">
-      <h1>O <i>Case</i> de Sucesso do OpenBSD</h1>
+      <h1>O <em>Case</em> de Sucesso do OpenBSD</h1>
     </section>
 
     <section class="slide" id="openbsd">
       <h2>OpenBSD</h2>
+      <img src="res/proactive-security-development/tdraadt.jpeg"
+       style="float:left;">
       <img src="res/bsd-first-steps/obsd-puffy.jpg">
       <ul>
         <li>
@@ -280,7 +376,7 @@
     <section class="slide" id="openbsd-cas-1/3">
       <h2><em>Case</em> OpenBSD</h2>
       <ul>
-        <li class="slide deck-child-current">
+        <li>
           <p><strong>Objetivo - </strong>Aspira ser o número 1 em segurança na indústria de software (Se é que ja não é). Seu modelo de desenvolvimento de <em>software Open Source</em> permite que sejam feitas mudanças que muitos comerciantes de <em>software</em> não fariam.</p>
         </li>
         <li class="slide deck-child-current">
@@ -367,7 +463,7 @@
       <ul>
         <li>
           <p><strong>Escreva código claro e simples.</strong><p>
-          <blockquote style="font-size:0.7em;">
+          <blockquote style="font-size:1.1em;">
             "One of my most productive days was throwing away 1000 lines of code"
             <p><cite>Ken Thompson</cite></p>
           </blockquote>
@@ -396,27 +492,43 @@
         <li class="slide deck-child-current">
           <p><strong>Para alto nível de confidencialidade utilize servidores de criptografia.</strong></p>
         </li>
+        <li class="slide deck-child-current">
+          <p><strong>Usem e abusem de GameDay. (Agentes estressores)</strong>
+           </p>
+        </li>
+        <li class="slide deck-child-current">
+          <p><strong>Invista mais em qualidade de código e conhecimento do que
+           em ferramentas preditivas <em>milagrosas</em>. (Estratégia Barbell)
+           </strong></p>
+        </li>
+        <li class="slide deck-child-current">
+          <p><strong>Crie formas de punição para quem está entregando com má
+           qualidade. (Skin in the game)</strong></p>
+        </li>
       </ul>
     </section>
 
     <section class="slide">
         <h2>Perguntas ???</h2>
         <blockquote>
-            <p>"Não existe pergunta boba, existe bobo que não pergunta e volta sem nenhuma resposta pra casa"
-            <cite>Um Rabino Amigo Meu</cite></p>
+            <p>"Não tenha medo de acertar sozinho"
+            <cite>Desconheço a fonte</cite></p>
         </blockquote>
         <p>
-        Grupo: <a
-             href="https://groups.io/g/bug-cas">https://groups.io/g/bug-cas</a><br>
-        Lista de discussão: <a
-             href="mailto:bug-cas@groups.io">bug-cas@groups.io</a><br>
-        Inscrição por Email: <a
-             href="mailto:bug-cas+subscribe@groups.io">bug-cas+subscribe@groups.io</a><br>
+        Grupo:
+        <a href="https://groups.io/g/bug-cas">https://groups.io/g/bug-cas</a>
+        <br>
+        Lista de discussão:
+        <a href="mailto:bug-cas@groups.io">bug-cas@groups.io</a><br>
+        Inscrição por Email: 
+        <a href="mailto:bug-cas+subscribe@groups.io">
+          bug-cas+subscribe@groups.io
+        </a><br>
         Canal no YouTube:
-        <a href="https://www.youtube.com/channel/UCzqh22z9dLEOOyRn4D8hZ-w">https://www.youtube.com/channel/UCzqh22z9dLEOOyRn4D8hZ-w</a>
-        <a href="http://www.alephbit.com.br">www.alephbit.com.br</a><br>
-        <a href="mailto:wneto@alephbit.com.br">wneto@alephbit.com.br</a><br>
-        Twitter: @__wneto
+        <a href="https://tiny.cc/yt-alephbit">https://tiny.cc/yt-alephbit</a>
+        <br>
+        <a href="mailto:wsouzant@gmail.com">wsouzant@gmail.com</a><br>
+        Twitter: @wnet0_
         </p>
     </section>
 

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Desenvolvimento com Segurança Proativa</title>
+
+  <meta name="description" content="A jQuery library for modern HTML presentations">
+  <meta name="author" content="Caleb Troughton">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <!-- Core and extension CSS files -->
+  <link rel="stylesheet" media="screen" href="../core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="../extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="../extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="../extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="../extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="../extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/style/swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="../themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="../core/print.css">
+
+  <script src="../modernizr.custom.js"></script>
+</head>
+
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides -->
+    <section class="slide" id="title-slide">
+      <div class="vcenter">
+        <h1>Fundamentos de Criptografia</h1>
+        <h3>by Walter Neto</h3>
+      </div>
+    </section>
+
+    <section class="slide" id="mini-cv">
+      <h2>Mini Currículo</h2>
+      <h4>Walter Neto</h4>
+      <p>Cresceu na cidade de Bebedouro, interior de São Paulo;</p>
+      <p>Engenheiro de Computação pela Estácio - UniSEB (Faculdades COC) -
+      Ribeirão Preto;</p>
+      <p>Começou a programar computadores com 12 anos de idade (fiquei louco
+      cedo);</p>
+      <p>Ja foi usuário do Linux Conectiva 4.6, Debian (woody), Slackware e
+      Gentoo;</p>
+      <p>Usuário e hacker de kernel do OpenBSD (quando consegue um tempo);</p>
+      <p>Implementou um sistema de journaling para o file system do OpenBSD (não
+      oficial);</p>
+      <p>Fundou o BUG (BSD Users Group) Campinas, pra ter uma comunidade na
+      região onde mora em que possa compartilhar e aprender sobre o uso e
+      desenvolvimento destes poderosos SOs.</p>
+    </section>
+
+    <section class="slide" id="partner-groups">
+      <h2>Grupos / Comunidades Parceiros(as)</h2>
+      <div style="display:flex; flex-direction:row; flex-wrap: wrap;
+      justify-content: space-around;">
+          <img src="res/bsd-first-steps/lhc.jpg">
+          <img src="res/bsd-first-steps/gdg-cas.png">
+          <img src="res/bsd-first-steps/superlogicalabs.png">
+      </div>
+      <p>
+        <a href="https://lhc.net.br">https://lhc.net.br</a><br>
+        <a href="https://www.meetup.com/gdgcampinas/">
+            https://www.meetup.com/gdgcampinas/</a><br>
+        <a href="http://labs.superlogica.com">http://labs.superlogica.com/</a>
+      </p>
+    </section>
+
+    <section class="slide" id="overview">
+      <h2>Visão Geral</h2>
+      <ul>
+        <li class="slide deck-child-current">
+          <h4>Um pouco de história</h4>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Formas de criptografia</h4>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Tipos de ataques</h4>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Simétrico vs Assimétrico</h4>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Conclusões</h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="history-0">
+      <h2>Um pouco de história</h2>
+      <ul>
+        <li>
+          <p>Cifra de César (método mais antigo que se tem registro).</p>
+          <img src="res/crypto-foundations/cifracesar.png" style="height:300px;">
+        </li>
+        <li class="slide deck-child-current">
+          <p>Relatos de guerras antigas (esteganografia).</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="history-1">
+      <h2>Um pouco de história</h2>
+      <ul>
+        <li>
+          <p>Caesar box</p>
+          <img src="res/crypto-foundations/caesarbox-0.webp" style="width:45%; float:left;">
+          <img src="res/crypto-foundations/caesarbox-1.webp" style="width:45%;">
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="crypto-ways-0">
+      <h2>Formas de Criptografia</h2>
+      <ul>
+        <li>
+          <h4>Substituição</h4>
+          <p>Troca-se alguma coisa por outra.</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Transposição</h4>
+          <p>Troca-se apenas as coisas de lugar.</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Ofuscamento</h4>
+          <p>Muito utilizado para tokens e senhas.</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Conceito de chave</h4>
+          <p>Uma maneira de estabelecer um método para cifrar a mensagem e combinar uma chave entre as pontas.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="attacks">
+      <h2>Tipos de Ataques</h2>
+      <ul>
+        <li>
+          <h4>Força Bruta</h4>
+          <p>Busca descobrir a chave de uma maneira incremental, matematicamente uma hora vai acertar, e ninguém é tão sortudo que acerte de primeira nem tão azarado que acerte apenas na última.</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Criptoanálise</h4>
+          <p>Método que procura utilizar formas mais complexas e inteligentes para encontrar mais rapidamente uma chave. (Análise de Frequência, Colas)</p>
+          <img src="res/crypto-foundations/forca.png">
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="crypto-ways-1">
+      <h2>Formas de Criptografia</h2>
+      <ul>
+        <li>
+          <h4>Algorítimos de Bloco</h4>
+          <p>A chave é aplicada em blocos.</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Algorítimos de Fluxo</h4>
+          <p>É utilizado um algorítmo com sementes sem um sequência definida. (RC4 faz isso)</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="symmetrical-vs-asymmetrical">
+      <h2>Simétrico vs Assimétrico</h2>
+      <ul>
+        <li>
+          <h4>Chave Simétrica</h4>
+          <p>Possui uma chave única para cifrar e decifrar a mensagem, a alusão é com a uma porta.</p>
+        </li>
+        <li class="slide deck-child-current">
+          <h4>Chave Assimétrica</h4>
+          <p>Nesses algorítimos temos duas chaves, uma para cifrar a mensagem, e outra para decifrar, a alusão aqui é o envio de algo com dois cadeados (vou tentar ilustrar).</p>
+          <p>Procurar sobre algorítimos de Diffie-Hellman.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="conclsion">
+      <h2>Conclusão</h2>
+      <ul>
+        <li>
+          <h4>Utilize os métodos corretos para cada cenário.</h4>
+        </li>
+        <li>
+          <h4>Não frite seu processamento atoa.</h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Perguntas?</h2>
+        <blockquote>
+            <p>"Não existe pergunta boba, existe bobo que não pergunta e volta sem nenhuma resposta pra casa"
+            <cite>Um Rabino Amigo Meu</cite></p>
+        </blockquote>
+        <p>
+        Grupo: <a
+             href="https://groups.io/g/bug-cas">https://groups.io/g/bug-cas</a><br>
+        Lista de discussão: <a
+             href="mailto:bug-cas@groups.io">bug-cas@groups.io</a><br>
+        Inscrição por Email: <a
+             href="mailto:bug-cas+subscribe@groups.io">bug-cas+subscribe@groups.io</a><br>
+        Canal no YouTube:
+        <a href="https://www.youtube.com/channel/UCzqh22z9dLEOOyRn4D8hZ-w">https://www.youtube.com/channel/UCzqh22z9dLEOOyRn4D8hZ-w</a>
+        <a href="http://www.alephbit.com.br">www.alephbit.com.br</a><br>
+        <a href="mailto:wneto@alephbit.com.br">wneto@alephbit.com.br</a><br>
+        Twitter: @__wneto
+        </p>
+    </section>
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+<script src="../jquery.min.js"></script>
+
+<!-- Deck Core and extensions -->
+<script src="../core/deck.core.js"></script>
+<script src="../extensions/menu/deck.menu.js"></script>
+<script src="../extensions/goto/deck.goto.js"></script>
+<script src="../extensions/status/deck.status.js"></script>
+<script src="../extensions/navigation/deck.navigation.js"></script>
+<script src="../extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+  $.deck('.slide');
+});
+</script>
+
+</body>
+</html>
