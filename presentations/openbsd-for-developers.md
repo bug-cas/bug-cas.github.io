@@ -14,6 +14,13 @@
  - Foco em ser orientado aos desenvolvedores, principalmente os que estão desenvolvendo o OpenBSD
 
 ## Implementações inovadoras
+
 ## Ambiente padrão de desenvolvimento
+
 ## Tour pelo código fonte
+
 ## Como contribuir
+- [Mailing lists](https://www.openbsd.org/mail.html)
+- [ports(7)](https://man.openbsd.org/ports.7)
+- [style(9)](https://man.openbsd.org/style.9)
+- [mdoc(7)](https://man.openbsd.org/mdoc.7)
