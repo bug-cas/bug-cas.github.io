@@ -25,7 +25,7 @@
 - KARL (6.2)
 
 ## Ambiente padrão de desenvolvimento
-- clang
+- LLVM/clang
 - gcc
 - outras linguagens
 
